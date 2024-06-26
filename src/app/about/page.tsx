@@ -6,11 +6,10 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
-  XIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
+import { getYearsExperience } from '@/lib/utils'
 
 function SocialLink({
   className,
@@ -69,58 +68,84 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            I’m Sam Spoerl and I’m a coding addict.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Hi, my name is Sam Spoerl. I’m a software engineer and I’ve been
+              writing code for over {getYearsExperience()} years.
             </p>
+
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              Like many software developers, I got my start because of some
+              tedious task I didn’t want to do anymore. For me, it was a report
+              that required a lot of manual parsing through data in an
+              home-grown ERP system. I then spent an entire summer learning SQL
+              in my free time to automate that report.
             </p>
+
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              After that, I was forever changed. I discovered my love for
+              automation and writing code. I graduated college and started a
+              role as a Supply Chain Analyst. I joined the team at its
+              inception. The team was effectively formed for a single initial
+              purpose: to crank out reports.
             </p>
+
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              These reports were an immensely manual process. Our data source
+              was filled with unclean data, where we needed to understand that
+              “PRODUCT” and “prdct” were the same thing. We estimated that it
+              took about 60 hours on average to finish a report on a single
+              product.
+            </p>
+
+            <p>
+              Driven by a dislike for manual processes, I learned Python to fill
+              the gaps that SQL left in this process. Combining multiple queries
+              with a fuzzy-wuzzy string match and pandas DataFrames, I was able
+              to reduce the man hours to complete this task down to as little as
+              a minute. We still had to wait for the program to run, but we were
+              able to work on other, more fulfilling tasks while we waited.
+            </p>
+
+            <p>
+              That began my love affair with coding. Since then, I’ve explored
+              myriad other languages including R, Java, HTML/CSS, JavaScript,
+              and eventually my favorite: C#.
+            </p>
+
+            <p>
+              Also, as I started working less on analytics and more on pure
+              software development, I began focusing in areas such as cloud
+              services, Agile methodology, DevOps, and database management. As a
+              member of a two-person software development team, I’ve had my hand
+              in everything. No language, framework, or technology is off
+              limits. This has not only satisfied my intellectual itch, but made
+              me an all around better programmer.
+            </p>
+
+            <p>
+              For me, coding is like a drug. I can’t imagine giving it up, I
+              think about it day and night, and I do it on the weekends.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            <SocialLink
+              href="https://github.com/samspoerl"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-              Follow on LinkedIn
-            </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
-              icon={MailIcon}
-              className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+              href="https://www.linkedin.com/in/sam-spoerl/"
+              icon={LinkedInIcon}
+              className="mt-4"
             >
-              spencer@planetaria.tech
+              Follow on LinkedIn
             </SocialLink>
           </ul>
         </div>

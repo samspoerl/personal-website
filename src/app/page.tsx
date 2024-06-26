@@ -16,6 +16,7 @@ import image5 from '@/images/photos/image-5.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import React from 'react'
+import { getYearsExperience } from '@/lib/utils'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -337,7 +338,7 @@ export default async function Home() {
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Hi, I’m Sam. I’m a software developer and enthusiast based in
-            Washington, D.C. I’ve been writing code for over five years, and
+            Washington, D.C. I’ve been writing code for over {getYearsExperience()} years, and
             this is my personal website. I built it to introduce myself,
             showcase my work, and foster new connections.
           </p>
