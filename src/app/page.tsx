@@ -5,16 +5,9 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  XIcon,
-} from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
+import logoDirectSupply from '@/images/logos/direct-supply.svg'
+import logoBdoUsa from '@/images/logos/bdo-usa.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -22,6 +15,7 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+import React from 'react'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -64,6 +58,26 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       <path
         d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
         className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
+
+function Square3Stack3DIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="size-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
       />
     </svg>
   )
@@ -187,35 +201,21 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'BDO USA',
+      title: 'Software Developer',
+      logo: logoBdoUsa,
+      start: '2021',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
-    },
-    {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'Direct Supply',
+      title: 'Analyst',
+      logo: logoDirectSupply,
+      start: '2018',
+      end: '2021',
     },
   ]
 
@@ -230,10 +230,70 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      {/* TODO: Potentially add later with an updated resume */}
+      {/* <Button href="#" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+      </Button> */}
+    </div>
+  )
+}
+
+interface TechLayer {
+  layer: string
+  technologies: string[]
+}
+
+function TechLayer({ layer }: { layer: TechLayer }) {
+  return (
+    <li className="flex gap-4">
+      <dl className="flex flex-auto flex-wrap gap-x-2">
+        <dt className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+          {layer.layer}
+        </dt>
+        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+          {layer.technologies.join(' | ')}
+        </dd>
+      </dl>
+    </li>
+  )
+}
+
+function Stack() {
+  const technologies: TechLayer[] = [
+    {
+      layer: 'Front-end Frameworks',
+      technologies: ['React', 'Next.js', 'Blazor'],
+    },
+    {
+      layer: 'Backend Frameworks',
+      technologies: ['Express.js', 'ASP.NET Core'],
+    },
+    {
+      layer: 'Databases',
+      technologies: ['PostgreSQL', 'MongoDB', 'SQL Server'],
+    },
+    {
+      layer: 'Languages',
+      technologies: ['JavaScript', 'TypeScript', 'C#', 'HTML', 'CSS', 'SQL'],
+    },
+    {
+      layer: 'Cloud Providers',
+      technologies: ['Microsoft Azure', 'Vercel'],
+    },
+  ]
+
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <Square3Stack3DIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Technologies</span>
+      </h2>
+      <ol className="mt-6 space-y-4">
+        {technologies.map((layer, i) => (
+          <TechLayer key={i} layer={layer} />
+        ))}
+      </ol>
     </div>
   )
 }
@@ -273,28 +333,22 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software designer, founder, and amateur astronaut.
+            Software developer and enthusiast.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            Hi, I’m Sam. I’m a software developer and enthusiast based in
+            Washington, D.C. I’ve been writing code for over five years, and
+            this is my personal website. I built it to introduce myself,
+            showcase my work, and foster new connections.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
-              href="#"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="#"
+              href="https://github.com/samspoerl"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="#"
+              href="https://www.linkedin.com/in/sam-spoerl/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
@@ -304,13 +358,10 @@ export default async function Home() {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
+          <div className="space-y-10 lg:pl-16 xl:pl-24">
+            <Stack />
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
             <Resume />
           </div>
         </div>
