@@ -42,17 +42,31 @@ export const metadata = {
 export default function CarveOuts() {
   return (
     <SimpleLayout
-      title="Stuff I use, gadgets I love, and other things I recommend."
-      intro="This page was inspired by my favorite podcast, Acquired.fm. At the end of every episode they share their “carve outs” - essentially recommendations for stuff they've found cool lately. As a big nerd with high standards for what I buy, I have more than a few carve outs of my own. Here’s a big list of all of my favorite stuff."
+      title="Books, gadgets, and other stuff I recommend."
+      intro={
+        <>
+          "This page was inspired by my favorite podcast,{' '}
+          <a
+            className="text-zinc-800 underline dark:text-zinc-100"
+            href="https://www.acquired.fm"
+          >
+            Acquired.fm
+          </a>
+          . At the end of every episode they share their “carve outs” -
+          essentially recommendations for stuff they've found cool lately. As a
+          big nerd with high standards for what I buy, I have more than a few
+          carve outs of my own. Here’s a big list of all of my favorite stuff."
+        </>
+      }
     >
       <div className="space-y-20">
         <ToolsSection title="Workstation">
           <Tool title="Lenovo ThinkPad X1 Carbon (Gen 10), Intel i7 Processor, 16GB RAM">
-            I’ve been a die-hard Windows user for years. That may be an
-            unpopular opinion in this line of work, but I stand by it. I love
-            the open ecosystem, and I love using the same OS for both work and
-            personal projects. Plus, my parents both run Windows and they always
-            seem to need technical support.
+            I’ve been a die-hard Windows user for years. That may be a
+            controversial opinion in this line of work, but I stand by it. I
+            love the (slightly-more) open ecosystem, and I love using the same
+            OS for both work and personal projects. Plus, my parents both run
+            Windows and they always seem to need technical support.
             <br />
             <br />
             Windows aside, I actually wouldn’t recommend this particular laptop.

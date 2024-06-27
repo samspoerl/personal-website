@@ -11,7 +11,7 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'This site!',
     description:
       'Creating technology to empower civilians to explore space on their own terms.',
     link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
@@ -60,14 +60,31 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'Personal projects',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Personal projects."
+      intro={
+        <>
+          <p>
+            I’ve worked on tons of little projects over the years but these are
+            the ones that I’m most proud of. Work on side projects for reasons
+            of learning and curating a portfolio of work, but the strongest
+            motivator for me usually that I want the app for myself, either
+            because I want custom features, don't want to pay for another
+            service, or I want more control over my data.
+          </p>
+          <br />
+          <p>
+            Many of them are open-source, so if you see something that piques
+            your interest, check out the code and contribute if you have ideas
+            for how it can be improved."
+          </p>
+        </>
+      }
     >
       <ul
         role="list"
