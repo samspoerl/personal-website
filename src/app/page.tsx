@@ -209,7 +209,7 @@ export default async function Home() {
             Software developer and enthusiast.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hi, I'm Sam. I'm a software engineer based in Washington, D.C. I've
+            Hi, I&apos;m Sam. I&apos;m a software engineer based in Washington, D.C. I&apos;ve
             been writing code for over {getYearsExperience()} years, and this is
             my personal website. I built it to introduce myself, showcase my
             work, and foster new connections.

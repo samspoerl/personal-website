@@ -46,7 +46,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'About Sam Spoerl',
 }
 
 export default function About() {
@@ -65,17 +65,17 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I'm Sam Spoerl and I'm a coding addict.
+            I&apos;m Sam Spoerl and I&apos;m a coding addict.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              Hi, my name is Sam Spoerl. I'm a software engineer and I've been
+              Hi, my name is Sam Spoerl. I&apos;m a software engineer and I&apos;ve been
               writing code for over {getYearsExperience()} years.
             </p>
 
             <p>
               Like many software developers, I got my start because of some
-              tedious task I didn't want to do anymore. For me, it was a report
+              tedious task I didn&apos;t want to do anymore. For me, it was a report
               that required a lot of manual parsing through data in a home-grown
               ERP system. I then spent an entire summer learning SQL in my free
               time to automate that report.
@@ -107,15 +107,15 @@ export default function About() {
             </p>
 
             <p>
-              That began my love affair with coding. Since then, I've explored
+              That began my love affair with coding. Since then, I&apos;ve explored
               myriad other languages and frameworks, including JavaScript,
-              TypeScript, HTML/CSS, Java, and C#. Recently, I've worked mostly
+              TypeScript, HTML/CSS, Java, and C#. Recently, I&apos;ve worked mostly
               in .NET for work and Node for my personal projects.
             </p>
 
             {/* <p>
-              I don't have a favorite of the two, and I'd say the choice depends
-              on what I'm building. My company is thorougly integrated into the
+              I don&apos;t have a favorite of the two, and I&apos;d say the choice depends
+              on what I&apos;m building. My company is thorougly integrated into the
               Microsoft ecosystem, so everything we do is .NET. I think Next.js
               is a fantastic front-end framework, and in my experience, Python
               and Node have better third-party support. For example, OpenAI
@@ -126,16 +126,16 @@ export default function About() {
             <p>
               Also, I began focusing in areas such as cloud services, Agile
               methodology, DevOps, and database management. As a member of a
-              small software development team, I've had my hand in everything.
+              small software development team, I&apos;ve had my hand in everything.
               No language, framework, or technology is off limits. This has not
               only satisfied my intellectual itch, but made me an all-around
               better engineer.
             </p>
 
             <p>
-              It's been an unconventional path, but a very rewarding one. I feel
-              like I've had to work twice as hard as other developers to catch
-              up and prove myself. The only reason it's been possible is because
+              It&apos;s been an unconventional path, but a very rewarding one. I feel
+              like I&apos;ve had to work twice as hard as other developers to catch
+              up and prove myself. The only reason it&apos;s been possible is because
               I absolutely love it. I find coding addicting. I love solving
               problems and coding is one big, never-ending problem. Building an
               app, a feature, or learning a new skill feels like completing a

@@ -126,13 +126,13 @@ export default function Projects() {
           <p>
             I work on side projects to learn and build a portfolio, but the
             strongest motivator for me is usually that I want the app for
-            myself. Sometimes, I want custom features, don't want to pay for
+            myself. Sometimes, I want custom features, don&apos;t want to pay for
             another service, or want more control over my data.
           </p>
           <br />
           <p>
-            I've worked on tons of little projects over the years but these are
-            the ones of which I'm most proud. Some of them are a work in
+            I&apos;ve worked on tons of little projects over the years but these are
+            the ones of which I&apos;m most proud. Some of them are a work in
             progress, some have live demos, and many of them are open-source. If
             you see something that piques your interest, check out the code and
             contribute if you have ideas for how it can be improved.
