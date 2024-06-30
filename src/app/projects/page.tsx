@@ -2,7 +2,6 @@ import { type Metadata } from 'next'
 import Image, { ImageProps } from 'next/image'
 
 import { GitHubIcon } from '@/components/SocialIcons'
-import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import screenshot1 from '@/images/photos/personal-website.png'
 import { Button } from '@/components/Button'
@@ -11,6 +10,7 @@ import Link from 'next/link'
 interface Project {
   name: string
   description: string
+  stack: string
   gitHubLink?: string
   demoLink?: string
   image?: ImageProps['src']
@@ -22,13 +22,16 @@ const projects: Project[] = [
     name: 'This site!',
     description:
       "The site you're looking at is one of my projects. I built it to introduce myself and showcase my work.",
+    stack: 'Next.js | React | Tailwind UI | Tailwind CSS | TypeScript',
     gitHubLink: 'https://github.com/samspoerl/personal-website',
     image: screenshot1,
   },
   {
     name: 'Personal Finance App',
     description:
-      "I built this app to automate my monthly financial statements. It uses Plaid to fetch balances and transactions in real time. Check out the demo using Plaid's Sandbox environment.",
+      "I've already built a prototype to fetch my balances in real time. I plan on releasing a demo and open source code for a simple version of the app that uses the Plaid Sandbox environment (fake data). Look for that to come out soon.",
+    stack:
+      'Next.js Front-end | Express.js Backend | Prisma ORM | PostgreSQL | Plaid API',
     imageSubstitute: 'Coming soon!',
     // gitHubLink: 'https://github.com/samspoerl/personal-finance-app',
     // demoLink: 'https://finance.samspoerl.com',
@@ -36,13 +39,16 @@ const projects: Project[] = [
   {
     name: 'AI Assistant',
     description:
-      "No, I'm not trying to compete with ChatGPT. I built this app because the free version runs older models and uses your data to train its models. I didn't want to pay for ChatGPT+ and wanted some features they didn't have yet. Plus, it was fun to build.",
+      "No, I'm not trying to compete with ChatGPT. I'm building this app for greater control of my data, lower cost compared to ChatGPT+, and for custom features. Plus, it's fun to build. I've built a Windows desktop version already using WinUI, and now I'd like to build a version for the web.",
+    stack:
+      'Next.js Front-end | Express.js Backend | Prisma ORM | MongoDB | OpenAI API',
     imageSubstitute: 'In progress',
   },
   {
     name: 'Notes App',
     description:
-      "One of my biggest frustrations with nearly all of the note-taking apps on the market is that they all depend on title-based organization. Coming up with titles is burdensome and I feel like it stifles my creativity. I want an note-taking and journaling app that is date-based, so I don't have to create titles.",
+      "One of my biggest frustrations with nearly all of the note-taking apps on the market is that they all depend on title-based organization. Coming up with titles is burdensome and I feel like it stifles my creativity. I want a note-taking and journaling app that is timestamp-based so I don't have to create titles.",
+    stack: '',
     imageSubstitute: 'Planned',
   },
 ]
@@ -50,7 +56,7 @@ const projects: Project[] = [
 function ProjectCard({ project }: { project: Project }) {
   return (
     <>
-      <div className="flex h-64 flex-row overflow-hidden rounded-lg bg-white shadow-xl dark:bg-zinc-900 dark:shadow-2xl dark:shadow-zinc-950">
+      <div className="flex flex-row overflow-hidden rounded-lg bg-white shadow-xl dark:bg-zinc-900 dark:shadow-2xl dark:shadow-zinc-950">
         <div className="flex w-1/3 items-center justify-center">
           {project.image !== undefined ? (
             <Image
@@ -65,16 +71,17 @@ function ProjectCard({ project }: { project: Project }) {
             </p>
           )}
         </div>
-        <div className="flex h-full w-2/3 flex-col justify-between p-6">
+        <div className="flex w-2/3 flex-col justify-between p-6">
           <div>
             <p className="mb-4 text-base text-lg font-semibold text-zinc-800 dark:text-zinc-100">
               {project.name}
             </p>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              {project.description}
-            </p>
+            <div className="flex flex-col gap-y-4 text-sm text-zinc-600 dark:text-zinc-400">
+              <p>{project.description}</p>
+              <p>{project.stack}</p>
+            </div>
           </div>
-          <div className="mt-4 flex flex-row items-center justify-end gap-x-4">
+          <div className="mt-5 flex flex-row items-center justify-end gap-x-4">
             {project.gitHubLink !== undefined && (
               <Link
                 href={project.gitHubLink}
@@ -117,19 +124,18 @@ export default function Projects() {
       intro={
         <>
           <p>
-            I’ve worked on tons of little projects over the years but these are
-            the ones that I’m most proud of. I work on side projects to learn
-            and build a portfolio, but the strongest motivator for me is usually
-            that I want the app for myself, either because I want custom
-            features, don't want to pay for another service, or I want more
-            control over my data.
+            I work on side projects to learn and build a portfolio, but the
+            strongest motivator for me is usually that I want the app for
+            myself. Sometimes, I want custom features, don't want to pay for
+            another service, or want more control over my data.
           </p>
           <br />
           <p>
-            Some of them are a work in progress, some have live demos, and many
-            of them are open-source. If you see something that piques your
-            interest, check out the code and contribute if you have ideas for
-            how it can be improved.
+            I've worked on tons of little projects over the years but these are
+            the ones of which I'm most proud. Some of them are a work in
+            progress, some have live demos, and many of them are open-source. If
+            you see something that piques your interest, check out the code and
+            contribute if you have ideas for how it can be improved.
           </p>
         </>
       }
