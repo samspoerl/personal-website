@@ -4,6 +4,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
+import { Stack, TechLayer } from '@/components/Stack'
 import logoDirectSupply from '@/images/logos/direct-supply.svg'
 import logoBdoUsa from '@/images/logos/bdo-usa.svg'
 import image1 from '@/images/photos/image-1.jpg'
@@ -37,26 +38,6 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function Square3Stack3DIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="size-6"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
-
 function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
@@ -82,6 +63,29 @@ function SocialLink({
     </Link>
   )
 }
+
+const technologies: TechLayer[] = [
+  {
+    layer: 'Front-end Frameworks',
+    technologies: ['React', 'Next.js', 'Blazor'],
+  },
+  {
+    layer: 'Backend Frameworks',
+    technologies: ['Express.js', 'ASP.NET Core'],
+  },
+  {
+    layer: 'Databases',
+    technologies: ['PostgreSQL', 'MongoDB', 'SQL Server'],
+  },
+  {
+    layer: 'Languages',
+    technologies: ['JavaScript', 'TypeScript', 'C#', 'HTML', 'CSS', 'SQL'],
+  },
+  {
+    layer: 'Cloud Providers',
+    technologies: ['Microsoft Azure', 'Vercel'],
+  },
+]
 
 interface Role {
   company: string
@@ -169,65 +173,6 @@ function Resume() {
   )
 }
 
-interface TechLayer {
-  layer: string
-  technologies: string[]
-}
-
-function TechLayer({ layer }: { layer: TechLayer }) {
-  return (
-    <li className="flex gap-4">
-      <dl className="flex flex-auto flex-wrap gap-x-2">
-        <dt className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-          {layer.layer}
-        </dt>
-        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-          {layer.technologies.join(' | ')}
-        </dd>
-      </dl>
-    </li>
-  )
-}
-
-function Stack() {
-  const technologies: TechLayer[] = [
-    {
-      layer: 'Front-end Frameworks',
-      technologies: ['React', 'Next.js', 'Blazor'],
-    },
-    {
-      layer: 'Backend Frameworks',
-      technologies: ['Express.js', 'ASP.NET Core'],
-    },
-    {
-      layer: 'Databases',
-      technologies: ['PostgreSQL', 'MongoDB', 'SQL Server'],
-    },
-    {
-      layer: 'Languages',
-      technologies: ['JavaScript', 'TypeScript', 'C#', 'HTML', 'CSS', 'SQL'],
-    },
-    {
-      layer: 'Cloud Providers',
-      technologies: ['Microsoft Azure', 'Vercel'],
-    },
-  ]
-
-  return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <Square3Stack3DIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Technologies</span>
-      </h2>
-      <ol className="mt-6 space-y-4">
-        {technologies.map((layer, i) => (
-          <TechLayer key={i} layer={layer} />
-        ))}
-      </ol>
-    </div>
-  )
-}
-
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
@@ -264,11 +209,10 @@ export default async function Home() {
             Software developer and enthusiast.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hi, I’m Sam. I’m a software developer and enthusiast based in
-            Washington, D.C. I’ve been writing code for over{' '}
-            {getYearsExperience()} years, and this is my personal website. I
-            built it to introduce myself, showcase my work, and foster new
-            connections.
+            Hi, I'm Sam. I'm a software engineer based in Washington, D.C. I've
+            been writing code for over {getYearsExperience()} years, and this is
+            my personal website. I built it to introduce myself, showcase my
+            work, and foster new connections.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -287,8 +231,8 @@ export default async function Home() {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Stack />
+          <div className="space-y-10 lg:pl-16 xl:pl-24 rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+            <Stack layers={technologies} title='Technologies' />
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
