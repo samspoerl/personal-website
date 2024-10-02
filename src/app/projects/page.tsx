@@ -23,7 +23,7 @@ const projects: Project[] = [
     description:
       "The site you're looking at is one of my projects. I built it to introduce myself and showcase my work.",
     stack: 'Next.js | React | Tailwind UI | Tailwind CSS | TypeScript',
-    gitHubLink: 'https://github.com/samspoerl/personal-website',
+    gitHubLink: 'https://github.com/samspoerl/samspoerl.com',
     image: screenshot1,
   },
   {
