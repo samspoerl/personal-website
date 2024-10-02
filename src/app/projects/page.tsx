@@ -23,7 +23,7 @@ const projects: Project[] = [
     description:
       "The site you're looking at is one of my projects. I built it to introduce myself and showcase my work.",
     stack: 'Next.js | React | Tailwind UI | Tailwind CSS | TypeScript',
-    gitHubLink: 'https://github.com/samspoerl/personal-website',
+    gitHubLink: 'https://github.com/samspoerl/samspoerl.com',
     image: screenshot1,
   },
   {
@@ -41,7 +41,7 @@ const projects: Project[] = [
     description:
       "No, I'm not trying to compete with ChatGPT. I'm building this app for greater control of my data, lower cost compared to ChatGPT+, and for custom features. Plus, it's fun to build. I've built a Windows desktop version already using WinUI, and now I'd like to build a version for the web.",
     stack:
-      'Next.js Front-end | Express.js Backend | Prisma ORM | MongoDB | OpenAI API',
+      'Next.js | Tailwind CSS | Flowbite React | Plaid | Prisma ORM | MongoDB | OpenAI API',
     imageSubstitute: 'In progress',
   },
   {
@@ -124,18 +124,19 @@ export default function Projects() {
       intro={
         <>
           <p>
-            I work on side projects to learn and build a portfolio, but the
-            strongest motivator for me is usually that I want the app for
-            myself. Sometimes, I want custom features, don&apos;t want to pay for
-            another service, or want more control over my data.
+            I&apos;m constantly working on side projects, be it to learn a new
+            technology or add to my portfolio. But the strongest motivator for
+            me is usually that I want the app for myself. Sometimes, I want
+            custom features, don&apos;t want to pay for another service, or want
+            more control over my data.
           </p>
           <br />
           <p>
-            I&apos;ve worked on tons of little projects over the years but these are
-            the ones of which I&apos;m most proud. Some of them are a work in
-            progress, some have live demos, and many of them are open-source. If
-            you see something that piques your interest, check out the code and
-            contribute if you have ideas for how it can be improved.
+            I&apos;ve worked on tons of little projects over the years but these
+            are the ones which I&apos;m most proud of. Some of them are a work
+            in progress, some have live demos, and many of them are open-source.
+            If you see something that piques your interest, check out the code
+            and contribute if you have ideas for how it can be improved.
           </p>
         </>
       }
