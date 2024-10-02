@@ -53,9 +53,10 @@ export default function CarveOuts() {
             Acquired.fm
           </a>
           . At the end of every episode they share their “carve outs” -
-          essentially recommendations for stuff they&apos;ve found cool lately. As a
-          big nerd with high standards for what I buy, I have more than a few
-          carve outs of my own. Here&apos;s a big list of all of my favorite stuff.
+          essentially recommendations for stuff they&apos;ve found cool lately.
+          As a big nerd with high standards for what I buy, I have more than a
+          few carve outs of my own. Here&apos;s a big list of all of my favorite
+          stuff.
         </>
       }
     >
@@ -69,31 +70,32 @@ export default function CarveOuts() {
             Windows and they always seem to need technical support.
             <br />
             <br />
-            Windows aside, I actually wouldn&apos;t recommend this particular laptop.
-            It&apos;s noisy and the battery life is bad. My old ThinkPad didn&apos;t have
-            these issues, nor does my work machine (the enterprise workhorse
-            T-14).
+            Windows aside, I actually wouldn&apos;t recommend this particular
+            laptop. It&apos;s noisy and the battery life is bad. My old ThinkPad
+            didn&apos;t have these issues, nor does my work machine (the
+            enterprise workhorse T-14).
           </Tool>
           <Tool title="LG UltraFine 32 Inch 4K Monitor">
-            I freaking love this monitor. It&apos;s simple and high resolution. I
-            tried many other monitors before eventually landing on this one.
-            I&apos;ve had the dual monitor setup, and there are advantages to that,
-            but with two computers connected via a KVM switch, there were just
-            too many cables and it made my workspace feel cluttered.
+            I freaking love this monitor. It&apos;s simple and high resolution.
+            I tried many other monitors before eventually landing on this one.
+            I&apos;ve had the dual monitor setup, and there are advantages to
+            that, but with two computers connected via a KVM switch, there were
+            just too many cables and it made my workspace feel cluttered.
             <br />
             <br />I also tried a massive 45 inch curved LG OLED. It was a sweet
             monitor, the perfect size. The only problem was the pixel density.
             It was QHD but there was so much screen space that the resolution
             was actually worse than on my old FHD 24 inch monitors. Someday,
             when 4K or even 8K becomes the norm in these massive curved
-            monitors, I&apos;ll get one. But for right now, the LG I have is perfect.
+            monitors, I&apos;ll get one. But for right now, the LG I have is
+            perfect.
           </Tool>
           <Tool title="Logitech K750 Wireless Solar Keyboard">
             After getting tired of constantly recharging my old keyboard, I
             bought this solar-powered one. I&apos;ve had it for over a year and
-            haven&apos;t had to charge it once. I like the laptop-like feel better,
-            like on the MX Master, but it&apos;s worth it not to constantly be
-            plugging it in.
+            haven&apos;t had to charge it once. I like the laptop-like feel
+            better, like on the MX Master, but it&apos;s worth it not to
+            constantly be plugging it in.
           </Tool>
           <Tool title="FlexiSpot Standing Desk - 60 Inch">
             As someone with horrible posture, this was a game changer. When I
@@ -102,29 +104,51 @@ export default function CarveOuts() {
         </ToolsSection>
         <ToolsSection title="Books">
           <Tool title="The Art of Fielding by Chad Harbach">
-            A novel set along the coast of Lake Michigan in Wisconsin, where I&apos;m
-            from, it follows a young baseball player through college.
+            A novel set along the coast of Lake Michigan in Wisconsin, where
+            I&apos;m from, it follows a young baseball player through college.
             Beautifully written and you fall in love with the characters. If you
-            don&apos;t like baseball, I still think you&apos;d enjoy this book. If you do
-            like baseball, check it out from the library today.
+            don&apos;t like baseball, I still think you&apos;d enjoy this book.
+            If you do like baseball, check it out from the library today.
           </Tool>
           <Tool title="The Time Traveller's Wife by Audrey Neffeneger">
             One of my favorite books of all time. It follows two protagonists,
             Henry and Clare. Henry is (no surprise) a time traveller. Not only
-            is the prose and character development great, but the author&apos;s take
-            on time travel is really interesting.
+            is the prose and character development great, but the author&apos;s
+            take on time travel is really interesting.
             <br />
             <br />
-            I&apos;ve both read this book and listened to the audiobook. I recommend
-            both, and if you like audiobooks, this is one of the best. The
-            narrators split the parts of Henry and Clare, and both have awesome
-            voices. I imagine if Henry and Clare were real, these would be their
-            voices.
+            I&apos;ve both read this book and listened to the audiobook. I
+            recommend both, and if you like audiobooks, this is one of the best.
+            The narrators split the parts of Henry and Clare, and both have
+            awesome voices. I imagine if Henry and Clare were real, these would
+            be their voices.
           </Tool>
           <Tool title="The Mistborn Saga">
-            I&apos;m a huge fantasy nerd and this trilogy is my favorite. Sanderson
-            is all about world-building. He crafts clever characters and
-            even-cleverer plots. I&apos;ve read it twice and devoured it both times.
+            I&apos;m a huge fantasy nerd and this trilogy is my favorite.
+            Sanderson is all about world-building. He crafts clever characters
+            and even-cleverer plots. I&apos;ve read it twice and devoured it
+            both times.
+          </Tool>
+        </ToolsSection>
+        <ToolsSection title="Apps">
+          <Tool title="Flighty (iOS)">
+            I&apos;ve been using this app for a couple of years now, and
+            it&apos;s fantastic. It tracks upcoming flights, keeps a record of
+            past flights for fun end-of-year data on how many times you&apos;ve
+            flown around the globe, and it&apos;s got a beautiful UI. Flighty
+            will usually notify me of flight changes before my airline. They do
+            put a fair number of features behind a pay wall, but I&apos;ve been
+            happy with what&apos;s included for free.
+          </Tool>
+          <Tool title="Beli (iOS and Android)">
+            This is my favorite app as of late. It&apos;s great for keeping
+            track of bars, restaurants, and cafes that you&apos;ve been to or
+            want to go to. It uses an algorithm to rank places you&apos;ve been
+            to and then uses those rankings to recommend new places. I&apos;ve
+            found it has all the restaurants in my area and shows them on a map
+            color coded by my rating or expected rating. The design is clean and
+            intuitive. I highly recommend it if you like checking new
+            restaurants off your list.
           </Tool>
         </ToolsSection>
       </div>
