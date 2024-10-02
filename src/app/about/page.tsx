@@ -65,7 +65,7 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I&apos;m Sam Spoerl and I&apos;m a coding addict.
+            I&apos;m Sam and this is how I got here.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
@@ -110,7 +110,7 @@ export default function About() {
               That began my love affair with coding. Since then, I&apos;ve explored
               myriad other languages and frameworks, including JavaScript,
               TypeScript, HTML/CSS, Java, and C#. Recently, I&apos;ve worked mostly
-              in .NET for work and Node for my personal projects.
+              with .NET for work and Next.js for my personal projects.
             </p>
 
             {/* <p>
